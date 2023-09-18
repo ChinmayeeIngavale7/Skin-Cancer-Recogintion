@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href='{% static "/css/class.css" %}'>
+
+</head>
+<body>
+    <nav class="navbar">
+        <img src="images/logo.png" class="brand-logo" alt="" />
+        <ul class="nav-links">
+            <li class="nav-items"><a href="{% url 'main1'%}">Home</a> </li>
+            <!--li class="nav-items"><a href="{% url 'user_records'%}">Record</a> </li-->
+        </ul>
+        <div class ="right-container">
+            <a href="{% url 'logout'%}" class="logout"><button type="submit" class="sub-btn">Logout</button></a>
+        </div>
+    </nav>
+    <h1><u>Skin Cancer Type</u></h1>
+    <div class="image-container">
+    <center><img src="{{ image_url }}"class="centered-image"  alt="Predicted Image"></center>
+    </div>
+    <div class="head">
+        <h2><i>Nevus (NV) </i></h2>
+    </div>
+    <div class="para">
+        <p class="para">
+            Nevi (plural of nevus) are very common and can appear anywhere on the body. 
+            They can vary in color, shape, and size. Most nevi are harmless and do not 
+            require medical intervention. However, it's important to keep an eye on any changes 
+            in the appearance of nevi, such as changes in color, shape, or size.
+            <br><br>While most nevi are benign, some may have atypical features that could 
+            suggest a risk of developing into melanoma. It's recommended to consult a 
+            dermatologist if you notice any of the following features in a nevus:<br>
+            <br>1. Asymmetry: One half of the mole does not match the other half.<br>
+            <br>2. Varied Colors: The mole has different colors or unevenly distributed colors.<br>
+            <br>3. Diameter: The mole is larger than 6 millimeters in diameter<br>
+            .<br>4. Evolution: The mole is changing in size, shape, or color over time.
+            <br><br>Regular self-examinations and professional skin screenings can help 
+            identify any changes in moles or other skin lesions. If you have concerns 
+            about nevi or any other skin-related issues, it's best to consult with a 
+            dermatologist or healthcare professional.
+        </p>
+    </div>
+    <div class="intro">
+        <center>
+        <h3><i>Thank You !!!</i></h3>
+        <div class="container">
+            <a href="{% url 'main1' %}" class="login">Return to Home</a>
+            <!--a href="{% url 'register' %}" class="login"><button type="submit" id="btn">Signup</button></a-->
+        </div></center>
+    </div>
+</body>
+</html>

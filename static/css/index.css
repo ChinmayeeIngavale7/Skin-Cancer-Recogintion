@@ -1,0 +1,80 @@
+body 
+{
+  font-family:Arial; 
+  background: -webkit-linear-gradient(to right, #162135, #12868a); 
+  background: linear-gradient(to right, #162135, #12868a); 
+  color:whitesmoke;
+}
+
+h1{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
+form{
+    width:35rem;
+    margin: auto;
+    color:whitesmoke;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(11, 15, 13, 0.582);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    padding: 20px 25px;
+}
+
+/* Style for the select element */
+select {
+    appearance: none; /* Removes default appearance */
+    border: 1px solid #ccc;
+    padding: 15px 18px;
+    font-size: 16px;
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 4px;
+    background-color: white;
+}
+
+/* Style for dropdown arrow */
+select::-ms-expand {
+  display: none; /* Removes arrow in Internet Explorer */
+}
+
+/* Style for hover and focus states */
+select:hover, select:focus {
+  border-color: #007bff;
+}
+input[type=text], input[type=password],input[type=number],input[type=radio],input[type=tel],input[type=file]{
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 5px;
+    padding: 15px 18px;
+    box-sizing: border-box;
+}
+input[type="file"] {
+/* Apply your desired styles here */
+    background-color: #f3f5f6;
+    color: rgb(6, 6, 6);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Hide the default input[type="file"] appearance */
+input[type="file"]::-webkit-file-upload-button {
+    display: none;
+}
+
+button {
+    background-color: #030804;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 5px;
+    margin: 7px 0;
+    width: 100%;
+    font-size: 18px;
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% extends 'users/base.html' %}
+
+    {% block content %}
+    <br>
+    <div class="alert alert-success" role="alert">
+        <h2 style="text-align: center;">Logged out!</h2>
+    </div>
+
+    <h3>Login again?</h3>
+    <a href="{% url 'login' %}">---> Login</a> <br>
+    <a href="{% url 'home' %}"><--- Or go back to home.</a>
+    {% endblock content %}
+</body>
+</html>

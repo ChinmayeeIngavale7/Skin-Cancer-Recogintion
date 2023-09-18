@@ -1,0 +1,55 @@
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href='{% static "/css/class.css" %}'>
+    <style>
+        .para{
+            height:40vh;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <img src="images/logo.png" class="brand-logo" alt="" />
+        <ul class="nav-links">
+            <li class="nav-items"><a href="{% url 'main1'%}">Home</a> </li>
+            <!--li class="nav-items"><a href="{% url 'user_records'%}">Record</a> </li-->
+        </ul>
+        <div class ="right-container">
+            <a href="{% url 'logout'%}" class="logout"><button type="submit" class="sub-btn">Logout</button></a>
+        </div>
+    </nav>
+    <h1><u>Skin Cancer Type</u></h1>
+    <div class="image-container">
+    <center><img src="{{ image_url }}"class="centered-image"  alt="Predicted Image"></center>
+    </div>
+    <div class="head">
+        <h2><i>Dermatofibroma (DF) </i></h2>
+    </div>
+    <div class="para">
+        <p class="para">
+            Dermatofibroma is a non-cancerous skin lesion that typically appears as a firm,
+            raised bump on the skin. It often has a reddish-brown color and can vary in size.
+            <br><br>Dermatofibromas are usually harmless and do not require treatment unless 
+            they are causing discomfort or are cosmetically bothersome. In some cases, they may be 
+            surgically removed if they are causing symptoms or if there is concern about their appearance.
+            <br><br>It's important to note that a dermatologist should evaluate any skin growth or 
+            lesion to determine its nature and whether any further action is needed. 
+            If you suspect you have a dermatofibroma or any other skin concern, 
+            it's recommended to seek professional medical advice.
+        </p>
+    </div>
+    <div class="intro">
+        <center>
+        <h3><i>Thank You !!!</i></h3>
+        <div class="container">
+            <a href="{% url 'main1' %}" class="login">Return to Home</a>
+            <!--a href="{% url 'register' %}" class="login"><button type="submit" id="btn">Signup</button></a-->
+        </div></center>
+    </div>
+</body>
+</html>

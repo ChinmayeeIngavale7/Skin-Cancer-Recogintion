@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href='{% static "/css/class.css" %}'>
+
+</head>
+<body>
+    <nav class="navbar">
+        <img src="images/logo.png" class="brand-logo" alt="" />
+        <ul class="nav-links">
+            <li class="nav-items"><a href="{% url 'main1'%}">Home</a> </li>
+            <!--li class="nav-items"><a href="{% url 'user_records'%}">Record</a> </li-->
+        </ul>
+        <div class ="right-container">
+            <a href="{% url 'logout'%}" class="logout"><button type="submit" class="sub-btn">Logout</button></a>
+        </div>
+    </nav>
+    <h1><u>Skin Cancer Type</u></h1>
+    <div class="image-container">
+    <center><img src="{{ image_url }}"class="centered-image"  alt="Predicted Image"></center>
+    </div>
+    <div class="head">
+        <h2><i>Vascular Lesions (VASC) </i></h2>
+    </div>
+    <div class="para">
+        <p class="para">
+            Vascular lesions are abnormalities in the blood vessels that can appear on the skin. 
+            These lesions can vary in size, color, and appearance. They are generally 
+            categorized into two main types: vascular tumors and vascular malformations.
+            <br><br>1. Vascular Tumors: These are growths of blood vessels that are usually benign. 
+            They can appear as red or pink raised areas on the skin. 
+            Common examples include hemangiomas and cherry angiomas.<br>
+            <br>2. Vascular Malformations: These are structural abnormalities of 
+            blood vessels that are present at birth. They do not undergo rapid
+             growth like tumors and tend to grow at the same rate as the child. 
+             Examples include port-wine stains and venous malformations.
+             <br><br>It's important to note that while most vascular lesions are 
+             benign and do not pose a threat, some may require medical evaluation and treatment, 
+             especially if they cause discomfort, bleeding, or other issues. 
+             A dermatologist or medical professional can assess the type of vascular 
+             lesion and recommend appropriate management.
+             <br><br>If you suspect you have a vascular lesion or any other skin-related concern,
+              it's recommended to consult with a dermatologist or 
+              healthcare provider for proper evaluation and guidance.    
+        </p>
+    </div>
+    <div class="intro">
+        <center>
+        <h3><i>Thank You !!!</i></h3>
+        <div class="container">
+            <a href="{% url 'main1' %}" class="login">Return to Home</a>
+            <!--a href="{% url 'register' %}" class="login"><button type="submit" id="btn">Signup</button></a-->
+        </div></center>
+    </div>
+</body>
+</html>

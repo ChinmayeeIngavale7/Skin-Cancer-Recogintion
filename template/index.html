@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <title>Skin Cancer Prediction</title>
+    <link rel="stylesheet" href='{% static "/css/index.css" %}'>
+</head>
+<body>
+    <h1>Skin Cancer Prediction</h1>
+    <h2>Fill the information</h2>
+    <form method="post" action="{% url 'predict' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="name">Name:</label>
+        <input type="text" placeholder='Enter your name' name="name" required>
+        <label for="age">Age:</label>
+        <input type="number" name="age" min="5" max="105" required><br>
+        <label for="gender">Gender:</label>
+        <select name="gender" class="gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select><br>
+        <label for="localization">Localization:</label>
+        <!--<input type="text" name="localization" required>-->
+        <select id="cars" name="localization">
+          <option value="back">Back</option>
+          <option value="lower extremity">Lower Extremity</option>
+          <option value="trunk">Trunk</option>
+          <option value="upper extremity">Upper Extremity</option>
+          <option value="abdomen">Abdomen</option>
+          <option value="face">Face</option>
+          <option value="chest">Chest</option>
+          <option value="foot">Foot</option>
+          <option value="neck">Neck</option>
+          <option value="scalp">Scalp</option>
+          <option value="hand">Hand</option>
+          <option value="ear">Ear</option>
+          <option value="genital">Genital</option>
+          <option value="acral">Acral</option>
+        </select><br>
+        <label for="image" >Image:</label>
+        <input type="file" name="image" accept="image/*" required><br>
+        <button type="submit">Predict</button>
+        <!---<input type="submit" value="Predict">-->
+    </form>
+</body>
+</html>

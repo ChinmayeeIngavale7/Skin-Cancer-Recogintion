@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='{% static "/css/home.css" %}'>
+    <title>prediction</title>
+</head>
+<body>
+    <div class="image">
+        <h3>Upload the image to check your cancer prediction</h3>
+    
+        <label>Choose the file to upload:</label>
+        <input type="file" id="myFile" /> <br /><br />
+        <input type="submit" class="button" value="submit" />
+    </div>   
+</body>
+</html>

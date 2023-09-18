@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href='{% static "/css/record.css" %}'>
+
+</head>
+<body>
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>User Prediction Records</title>
+</head>
+<body>
+    <nav class="navbar">
+        <img src="images/logo.png" class="brand-logo" alt="" />
+        <ul class="nav-links">
+            <li class="nav-items"><a href="{% url 'main1'%}">Home</a> </li>
+            <!--li class="nav-items"><a href="{% url 'user_records'%}">Record</a> </li-->
+        </ul>
+        <div class ="right-container">
+            <a href="{% url 'logout'%}" class="logout"><button type="submit" class="sub-btn">Logout</button></a>
+        </div>
+    </nav>
+    <h1><U>User Prediction Records</U></h1>
+    {% if user_records %}
+    <table>
+        <tr>
+            <th><strong>Date & Time</strong></th>
+            <th><strong>name</strong></th>
+            <th><strong>Age</strong></th>
+            <th><strong>gender</strong></th>
+            <th><strong>localization</strong></th>
+            <th><strong>Prediction</strong></th>
+        </tr>
+        {% for record in user_records %}
+        <tr>
+            <td class="time">{{ record.timestamp }}</td>
+            <td>{{ record.name }}</td>
+            <td>{{ record.age }}</td>
+            <td>{{ record.gender }}</td>
+            <td>{{ record.localization }}</td>
+            <td>{{ record.prediction }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <p>No prediction records found.</p>
+    {% endif %}
+</body>
+</html>
+
+</body>
+</html>

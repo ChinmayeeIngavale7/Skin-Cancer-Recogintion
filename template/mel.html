@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href='{% static "/css/class.css" %}'>
+    <style>
+        .para{
+            height:60vh;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <img src="images/logo.png" class="brand-logo" alt="" />
+        <ul class="nav-links">
+            <li class="nav-items"><a href="{% url 'main1'%}">Home</a> </li>
+            <!--li class="nav-items"><a href="{% url 'user_records'%}">Record</a> </li-->
+        </ul>
+        <div class ="right-container">
+            <a href="{% url 'logout'%}" class="logout"><button type="submit" class="sub-btn">Logout</button></a>
+        </div>
+    </nav>
+    <h1><u>Skin Cancer Type</u></h1>
+    <div class="image-container">
+    <center><img src="{{ image_url }}"class="centered-image"  alt="Predicted Image"></center>
+    </div>
+    <div class="head">
+        <h2><i>Melanoma (MEL) </i></h2>
+    </div>
+    <div class="para">
+        <p class="para">
+            Melanoma is a type of skin cancer that develops in the melanocytes, 
+            which are the cells that produce melanin, the pigment responsible for skin color. 
+            Melanoma is considered the most serious and aggressive form of skin cancer.
+            <br><br>Melanoma can develop from existing moles or appear as a new, unusual growth on the skin.
+            It may vary in color, size, and shape, and it can appear anywhere on the body. 
+            Melanoma is more likely to spread to other parts of the body compared to other types of skin cancer.
+            <br><br>Early detection and treatment are crucial for improving the prognosis of melanoma.
+            Regular skin self-examinations and dermatologist screenings are important for identifying any 
+            suspicious growths. If you notice any changes in the color, size, shape, or appearance of a 
+            mole or other skin lesion, it's recommended to seek medical attention promptly.
+            <br><br>Melanoma can be deadly if not treated early, but with timely intervention,
+            the prognosis can be significantly improved. If you have concerns about melanoma 
+            or other skin-related issues, it's best to consult with a dermatologist or 
+            healthcare professional.
+              
+        </p>
+    </div>
+    <div class="intro">
+        <center>
+        <h3><i>Thank You !!!</i></h3>
+        <div class="container">
+            <a href="{% url 'main1' %}" class="login">Return to Home</a>
+            <!--a href="{% url 'register' %}" class="login"><button type="submit" id="btn">Signup</button></a-->
+        </div></center>
+    </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href='{% static "/css/class.css" %}'>
+    <style>
+        .para{
+            height:35vh;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+            <img src="images/logo.png" class="brand-logo" alt="" />
+            <ul class="nav-links">
+                <li class="nav-items"><a href="{% url 'main1'%}">Home</a> </li>
+                <!--li class="nav-items"><a href="{% url 'user_records'%}">Record</a> </li-->
+            </ul>
+            <div class ="right-container">
+                <a href="{% url 'logout'%}" class="logout"><button type="submit" class="sub-btn">Logout</button></a>
+            </div>
+        </nav>
+    <h1><u>Skin Cancer Type</u></h1>
+    <div class="image-container">
+    <center><img src="{{ image_url }}"class="centered-image"  alt="Predicted Image"></center>
+    </div>
+    <div class="head">
+        <h2><i>Benign Keratosis like lesions (BKL) </i></h2>
+    </div>
+    <div class="para">
+        <p class="para">
+                It is also known as Keratotic lesions.Benign Keratosis-like lesions (BKL) are not considered dangerous. "Benign" means that these lesions are 
+            non-cancerous and do not pose a significant health risk. BKL lesions may include a variety of skin 
+            conditions that have similar characteristics to keratosis (such as scaly, rough, or thickened skin),
+             but they are not cancerous growths.<br><br>It's important to note that a dermatologist or healthcare professional 
+             should evaluate any skin lesion to determine its nature and whether it requires further attention. 
+             While BKL lesions are typically not harmful, a medical expert's assessment can provide accurate 
+             information and guidance for appropriate management or treatment.
+        </p>
+    </div>
+    <div class="intro">
+        <center>
+        <h3><i>Thank You !!!</i></h3>
+        <div class="container">
+            <a href="{% url 'main1' %}" class="login">Return to Home</a>
+            <!--a href="{% url 'register' %}" class="login"><button type="submit" id="btn">Signup</button></a-->
+        </div></center>
+    </div>
+</body>
+</html>

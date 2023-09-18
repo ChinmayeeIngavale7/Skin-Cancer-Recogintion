@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href='{% static "/css/class.css" %}'>
+    <style>
+        .para{
+            height:36vh;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <img src="images/logo.png" class="brand-logo" alt="" />
+        <ul class="nav-links">
+            <li class="nav-items"><a href="{% url 'main1'%}">Home</a> </li>
+            <!--li class="nav-items"><a href="{% url 'user_records'%}">Record</a> </li-->
+        </ul>
+        <div class ="right-container">
+            <a href="{% url 'logout'%}" class="logout"><button type="submit" class="sub-btn">Logout</button></a>
+        </div>
+    </nav>
+    <h1><u>Skin Cancer Type</u></h1>
+    <div class="image-container">
+    <center><img src="{{ image_url }}"class="centered-image"  alt="Predicted Image"></center>
+    </div>
+    <div class="head">
+        <h2><i>Basal Cell Carcinoma (BCC) </i></h2>
+    </div>
+    <div class="para">
+        <p class="para">
+            It is the most common type of skin cancer and typically develops 
+            in areas of the skin that are frequently exposed to the sun, 
+            such as the face, neck, and hands. Basal cell carcinoma tends to 
+            grow slowly and rarely spreads to other parts of the body.
+            <br><br>Like other forms of skin cancer, it's crucial to get any suspicious
+             skin growths or lesions examined by a dermatologist. Early detection and treatment 
+             of basal cell carcinoma can help prevent it from spreading and causing more serious 
+             health issues.
+        </p>
+    </div>
+    <div class="intro">
+        <center>
+        <h3><i>Thank You !!!</i></h3>
+        <div class="container">
+            <a href="{% url 'main1' %}" class="login">Return to Home</a>
+            <!--a href="{% url 'register' %}" class="login"><button type="submit" id="btn">Signup</button></a-->
+        </div></center>
+    </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static '/css/main.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <img src="images/logo.png" class="brand-logo" alt="" />
+        <ul class="nav-links">
+            <li class="nav-items"><a href="{% url 'main1'%}">Home</a> </li>
+            <li class="nav-items"><a href="{% url 'user_records'%}">Record</a> </li>
+        </ul>
+        <div class ="right-container">
+            <a href="{% url 'logout'%}" class="logout"><button type="submit" class="sub-btn">Logout</button></a>
+        </div>
+    </nav>
+    
+    <div class="box-main">
+        <div class="intro">
+            
+            <h1>Skin Cancer Detection</h1>
+            
+            <p>Skin cancer is considered one of the most dangerous types of cancer and there 
+            is a drastic<br> increase in the rate of deaths due to lack of knowledge of the symptoms and their prevention.<br> 
+            This project uses machine learning and image processing tools to predict skin cancer.</p><br><br>
+            <div class="container">
+                <a href="{% url 'index' %}" class="login"><button type="submit" id="btn">Prediction</button></a>
+                <!--a href="{% url 'register' %}" class="login"><button type="submit" id="btn">Signup</button></a-->
+
+            </div>
+        </div>       
+    </div>
+    <div class="about">
+        <div class="about-me-text">
+                <h2>About Me</h2>
+                <p>The project aims to accurately classify skin lesions. Many people in rural areas are still unaware of
+                skin cancer symptoms and fail to predict the actual problem. Using this machine learning model skin 
+                cancer prediction is possible even in rural areas.
+                Early detection of skin cancer can lead to proper treatment which is important for successful outcomes.</p>
+        </div>
+        <img src= "{% static '/images/about_logo.png' %}" alt="me">
+    </div>
+</body>
+</html>

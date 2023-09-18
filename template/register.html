@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/css/login.css'%}">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+  />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <title>Registration page </title>
+    <style>
+      h1{
+          padding-top: 5%;
+          margin-top: 50px;
+          font-size:40px;
+      }
+  </style>
+</head>
+<body>
+  {% include 'navbar.html' %}
+
+    <h1>Skin Cancer Prediction </h1>
+    <form action="" method="post">
+      {% csrf_token %}
+        <!-- Headings for the form -->
+        <div class="headingsContainer">
+            <h3>Register</h3>
+            <p>Enter your details</p>
+        </div>
+
+        <!-- Main container for all inputs -->
+        <div class="mainContainer">
+            <!-- Username -->
+            <label for="username">Username</label>
+            <input type="text" placeholder="Enter Username" name="username" required>
+
+            <br><br>
+            <!-- Username >
+            <label for="contact">Number</label>
+            <input type="tel" placeholder="Enter your contact number" name="contact" required>
+
+            <br><br-->
+
+            <!-- Username -->
+            <label for="email">Email</label>
+            <input type="text" placeholder="Enter your email" name="email" required>
+
+            <br><br>
+            <!--<label for="age">Age</label>
+            <input type="number" placeholder="Enter your contact number" name="age" min="5" max="105" required>
+
+            <br><br>
+
+            <label for="gender">Gender</label>
+            <input type="radio" id="male" name="gender" value="Male">
+            <label for="Male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="Female">Female</label><br>
+            <input type="radio" id="trans" name="gender" value="Trans">
+            <label for="Trans">Trans</label><br-->
+            <br><br>
+
+            <label for="password">Password</label>
+            <input type="password" placeholder="Password" id="password1" name="password1" required>
+            <br><br>
+
+            <label for="password">Confirm Password</label>
+            <input type="password" placeholder="Password" id="password2" name="password2" required>
+
+            <!-- Submit button -->
+            <button type="submit" class="submit">Register</button>
+
+            <!-- Sign up link -->
+            <p class="register">Already have an account?  <a href="{% url 'login' %}">login</a></p>
+
+        </div>
+
+    </form>
+</body>
+<script>
+    const phoneInputField = document.querySelector("#phone");
+    const phoneInput = window.intlTelInput(phoneInputField, {
+      utilsScript:
+        "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+    });
+  </script>
+</html>
